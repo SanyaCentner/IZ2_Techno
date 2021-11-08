@@ -149,10 +149,12 @@ int max_sequence(Letters *letters, Names *names, char result_name[30], int size_
     return 0;
 }
 
-int comparasion_date(char data_start[11], char date_finish[11],char *date){
+int comparasion_date(char data_start[11], char date_finish[11], char *date) {
     if ((atoi(data_start) <= atoi(date)) && (atoi(date_finish) >= atoi(date))) {
         return 0;
-    } else return -1;
+    } else {
+        return -1;
+    }
 }
 
 int print_date(const char* msg, char* date) {

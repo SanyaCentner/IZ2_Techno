@@ -37,7 +37,7 @@ Names *input_names(const char *file_with_names, int size_symbols);
 int max_sequence(Letters *letters, Names *names, char result_name[30], int size_letters, int size_mailer,
                  char data_start[11], char data_finish[11]);
 
-int comparasion_date(char data_start[11], char date_start[11],char *date);
+int comparasion_date(char data_start[11], char date_start[11], char *date);
 
 int print_date(const char* msg, char* date);
 
