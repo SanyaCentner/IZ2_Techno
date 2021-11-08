@@ -5,7 +5,7 @@
 #include "parallel.h"
 
 int main(int argc, char const* argv[]) {
-    char result_sequential[30] = {};
+    char result_sequential[25] = {};
     const char *file_with_mailers;
     file_with_mailers = "mailer.txt";
     const char *file_with_names;
@@ -18,8 +18,8 @@ int main(int argc, char const* argv[]) {
     file_with_letter = "letter.txt";
     const char *file_with_date;
     file_with_date = "date.txt";
-    char date_start[11];
-    char date_finish[11];
+    char date_start[12];
+    char date_finish[12];
     printf("Минимальная дата - 2012.1.1\n");
     printf("Конечная дата - 2021.1.1\n");
     int start = print_date("Введите дату начала:\n", &date_start);
@@ -42,7 +42,7 @@ int main(int argc, char const* argv[]) {
     printf("Sequential. Time: %lf\n", (finish_sequential - start_sequential) / CLOCKS_PER_SEC);
     printf("Максимальное количество отправлений у пользователя %s", result_sequential);
 
-    char result_parallel[30]={};
+    char result_parallel[25]={};
 
     double start_parallel = clock();
 

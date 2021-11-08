@@ -119,15 +119,15 @@ Names *input_names(const char *file_with_names, int size_symbols) {
     int line_number = 0;
     while (!feof(f)) {
         Name *name = &(names->names[line_number]);
-        fgets(name->name, 30, f);
+        fgets(name->name, 25, f);
         line_number++;
     }
     fclose(f);
     return names;
 }
 
-int max_sequence(Letters *letters, Names *names, char result_name[30], int size_letters, int size_mailer,
-                 char data_start[11], char data_finish[11]) {
+int max_sequence(Letters *letters, Names *names, char result_name[25], int size_letters, int size_mailer,
+                 char data_start[12], char data_finish[12]) {
     int number[10000] = {};
 
     for (int i = 0; i < size_mailer; i++) {
@@ -149,7 +149,7 @@ int max_sequence(Letters *letters, Names *names, char result_name[30], int size_
     return 0;
 }
 
-int comparasion_date(char data_start[11], char date_finish[11], char *date) {
+int comparasion_date(char data_start[12], char date_finish[12], char *date) {
     if ((atoi(data_start) <= atoi(date)) && (atoi(date_finish) >= atoi(date))) {
         return 0;
     } else {

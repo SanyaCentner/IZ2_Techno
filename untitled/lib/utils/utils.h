@@ -34,16 +34,16 @@ Letters *input_letters(const char *file_with_mailers, const char *file_with_reci
 
 Names *input_names(const char *file_with_names, int size_symbols);
 
-int max_sequence(Letters *letters, Names *names, char result_name[30], int size_letters, int size_mailer,
-                 char data_start[11], char data_finish[11]);
+int max_sequence(Letters *letters, Names *names, char result_name[25], int size_letters, int size_mailer,
+                 char data_start[12], char data_finish[12]);
 
-int comparasion_date(char data_start[11], char date_start[11], char *date);
+int comparasion_date(char data_start[12], char date_start[12], char *date);
 
 int print_date(const char* msg, char* date);
 
 int maximum(int *maxim, int size_mailer);
 
 int max_parallel(Letters *letters, Names *names, int begin, int end, int result_name[10000],
-                 int size_mailer, char data_start[11], char data_finish[11]);
+                 int size_mailer, char data_start[12], char data_finish[12]);
 
 #endif  // LIB_UTILS_UTILS_H_
