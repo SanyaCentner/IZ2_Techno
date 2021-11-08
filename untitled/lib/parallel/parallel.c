@@ -1,7 +1,6 @@
 #include "parallel.h"
 #include "utils.h"
-#define letter_max_len  256
-#define name_max_len  32
+
 int parallel(const char *file_with_names, const char *file_with_mailers, const char *file_with_recipients,
               const char *file_with_topic, const char *file_with_letter, const char *file_with_date,
               char *result_name, int size_letters, int size_mailer,  char date_start[11],

@@ -7,7 +7,7 @@ Letters *input_letters(const char *file_with_mailers, const char *file_with_reci
     Letters *letters = (Letters*) malloc(size_symbols * sizeof(Letter));
     if (letters == NULL) {
         printf("Нет памяти");
-        return -1;
+        return NULL;
     }
     letters->count = size_symbols;
     FILE *f;
@@ -21,7 +21,7 @@ Letters *input_letters(const char *file_with_mailers, const char *file_with_reci
         Letter *letter = &(letters->letters[line_number]);
         if (letter == NULL) {
             printf("Нет памяти");
-            return -1;
+            return NULL;
         }
         fgets(letter->mailer, 25, f);
         line_number++;
@@ -39,7 +39,7 @@ Letters *input_letters(const char *file_with_mailers, const char *file_with_reci
         Letter *letter = &(letters->letters[line_number1]);
         if (letter == NULL) {
             printf("Нет памяти");
-            return -1;
+            return NULL;
         }
         fgets(letter->recipients, 64, f1);
         line_number1++;
