@@ -104,7 +104,7 @@ Letters *input_letters(const char *file_with_mailers, const char *file_with_reci
 }
 
 Names *input_names(const char *file_with_names, int size_symbols) {
-    Names *names = (Names*) malloc(size_symbols * sizeof(Name));
+    Names *names = (Names*) malloc(size_symbols * sizeof(Name) + sizeof(int));
     if (names == NULL) {
         printf("Нет памяти");
         return -1;
