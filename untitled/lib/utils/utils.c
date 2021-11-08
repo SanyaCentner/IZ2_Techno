@@ -4,7 +4,7 @@
 Letters *input_letters(const char *file_with_mailers, const char *file_with_recipients,
                        const char *file_with_topic, const char *file_with_letter, const char *file_with_date,
                        int size_symbols) {
-    Letters *letters = (Letters*) malloc(size_symbols * sizeof(Letter));
+    Letters *letters = (Letters*) malloc(size_symbols * sizeof(Letter) + sizeof(int));
     if (letters == NULL) {
         printf("Нет памяти");
         return NULL;
