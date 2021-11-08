@@ -83,7 +83,7 @@ int input_segments(segment *segments, long child_count,
 }
 
 int segment_processing(Letters *letters, Names *names, segment *segments, int child_count, int size_mailer,
-                       char date_start[11], char date_finish[11]) {
+                       char date_start[12], char date_finish[12]) {
     for (int i = 0; i < child_count; ++i) {
         if (segments[i].use == 0) {
             segments[i].use = 1;

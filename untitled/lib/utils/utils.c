@@ -77,7 +77,7 @@ Letters *input_letters(const char *file_with_mailers, const char *file_with_reci
             printf("Нет памяти");
             return -1;
         }
-        fgets(letter->body_of_letter, 100, f3);
+        fgets(letter->body_of_letter, 95, f3);
         line_number3++;
     }
     fclose(f3);
